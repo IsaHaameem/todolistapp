@@ -1,0 +1,137 @@
+:root {
+    --background-gradient: linear-gradient(to bottom right, #b2e0f6, #f9f9f9);
+    --header-bg: #2d5c8b;
+    --header-color: #ffffff;
+    --cell-bg: #ffffff;
+    --cell-border: #333;
+    --cell-x-color: #ff4d4d; /* Color for X */
+    --cell-o-color: #4dff88; /* Color for O */
+    --button-bg: #2d5c8b;
+    --button-hover-bg: #1a3f58;
+    --button-color: #ffffff;
+    --status-color: #333;
+    --transition-duration: 0.3s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--background-gradient);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    animation: fadeIn var(--transition-duration);
+}
+
+h1 {
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    padding: 20px;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px; /* Increased gap for better spacing */
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /* Increased font size for better visibility */
+    background-color: var(--cell-bg);
+    border: 2px solid var(--cell-border);
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color var(--transition-duration), transform var(--transition-duration), box-shadow var(--transition-duration); /* Animation effects */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+    background-color: #eaeaea;
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cell.x {
+    color: var(--cell-x-color);
+}
+
+.cell.o {
+    color: var(--cell-o-color);
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--status-color);
+    transition: color var(--transition-duration);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration), transform var(--transition-duration);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 70px); /* Smaller cells on smaller screens */
+    }
+
+    .cell {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem; /* Decreased font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    button {
+        font-size: 1rem; /* Adjust button size */
+    }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

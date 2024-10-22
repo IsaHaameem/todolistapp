@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-image: url('images/bgimg1.avif'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background fixed while scrolling */
+    color: white;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent black, adjust for visibility */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Smooth transition when background changes */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Get Started Button */
+.get-started-btn {
+    color: white;
+    padding: 10px ;
+    border-radius: 5px;
+    font-weight: bold;
+    /* border: 2px solid white; */
+    margin-left: auto;
+    cursor: pointer;
+    /* background-color: rgba(255, 255, 255, 0.2); Semi-transparent white background */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.get-started-btn:hover {
+    background-color: black; /* Green on hover */
+    color: white;
+    border: 2px solid black; /* Border turns green */
+}
+
+/* Header (Home) */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.home-content {
+    z-index: 2;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.home-content p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* About Us Section */
+.about-section {
+    padding: 50px;
+    background-color: none; /* Completely transparent */
+    text-align: center;
+    color: rgb(0, 0, 0); /* Ensure text is readable */
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Features Section */
+.features-section {
+    padding: 50px;
+    background-color: none; /* Completely transparent */
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .feature-list {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .home-content h1 {
+        font-size: 2.5em;
+    }
+
+    .home-content p {
+        font-size: 1.2em;
+    }
+}

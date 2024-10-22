@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listify - To-Do List with Gamification</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" href="../static/images/logo3.png" type="image/x-icon">
+</head>
+<body>
+    <audio id="notification-sound" src="sounds/notification.mp3"></audio>
+    <nav>
+        <div class="logo">
+            <img src="../static/images/logo3.png" alt="Listify Logo" style="height: 50px; width: auto;">
+            To-Do List
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="notepad.html">Notepad</a></li>
+            <!-- <li><a href="login.html">Login</a></li> -->
+            <!-- <li><a href="signup.html">Signup</a></li> -->
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task..." required>
+            <input type="date" id="due-date">
+            <input type="time" id="due-time">
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <select id="category">
+                <option value="general">General</option>
+                <option value="fitness">Fitness</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="personal">Personal</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div id="task-categories">
+            <h2>Categories</h2>
+            <div id="general-tasks" class="task-category"></div>
+            <div id="fitness-tasks" class="task-category"></div>
+            <div id="work-tasks" class="task-category"></div>
+            <div id="study-tasks" class="task-category"></div>
+            <div id="personal-tasks" class="task-category"></div>
+        </div>
+
+        <div class="stats">
+            <h3 id="points">Points: 0</h3>
+            <h3 id="streak">Streak: 0</h3>
+            <h3 id="daily-goal">Daily Goal: 0/3</h3>
+            
+            <!-- Progress Bar for Daily Goal -->
+            <div class="progress-container">
+                <progress id="goal-progress" value="0" max="100"></progress>
+                <!-- <span id="goal-points">0/100</span> -->
+            </div>
+        </div>
+        
+        <button id="play-game" style="display: none;">Play Game</button>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

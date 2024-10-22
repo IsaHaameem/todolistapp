@@ -1,0 +1,104 @@
+/* Set a default background image */
+:root {
+    --bg-image: url('../static/images/bgimg8.jpg'); /* Replace with your default image path */
+}
+
+/* Apply the background image to the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: var(--bg-image);
+    background-size: cover; /* Ensure the image covers the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Navbar styles */
+nav {
+    background: rgba(0, 123, 255, 0.8); /* Make the navbar slightly transparent */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center; /* Center logo vertically */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .logo img {
+    height: 40px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white; /* Navbar link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Game selection styles */
+.game-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.game-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    width: calc(25% - 40px); /* Adjusts width for responsiveness */
+}
+
+/* Make the entire card clickable */
+.game-card a {
+    display: block; /* Make the anchor tag a block element */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Use the current text color */
+    height: 100%; /* Allow anchor tag to take full height of the card */
+}
+
+.game-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.game-card h2 {
+    font-size: 20px;
+    color: #007bff; /* Title color */
+}
+
+.game-card p {
+    color: #555; /* Description color */
+}
+
+.game-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}

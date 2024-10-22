@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Trivia Quiz</title>
+    <link rel="stylesheet" href="../static/quiz.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Trivia Quiz</h1>
+        <div id="status-bar">
+            <div id="score">Score: 0</div>
+            <div id="streak">Streak: 0</div>
+            <div id="timer">Time Left: 30s</div>
+        </div>
+        
+        <div id="question-container">
+            <h2 id="question">Question will appear here</h2>
+            <ul id="answer-buttons" class="btn-group">
+                <!-- Answer buttons will be dynamically inserted here -->
+            </ul>
+        </div>
+
+        <div id="lifeline-container">
+            <button id="hint" class="lifeline-btn">Hint (50/50)</button>
+            <button id="skip" class="lifeline-btn">Skip Question</button>
+        </div>
+
+        <div id="feedback"></div>
+        <button id="next-btn" class="btn hide">Next Question</button>
+    </div>
+
+    <script src="../static/quiz.js"></script>
+</body>
+</html>

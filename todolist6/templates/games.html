@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Game - Listify</title>
+    <link rel="stylesheet" href="../static/games.css">
+    <link rel="icon" href="../static/images/logo3.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../static/images/logo3.png" alt="Listify Logo" id="logo"> <!-- Add your logo here -->
+            <span>Listify</span> <!-- You can keep this for the title -->
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="task.html">Tasks</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Select Your Game</h1>
+        <div class="game-selection">
+            <div class="game-card">
+                <a href="platformer.html" onclick="selectGame('Platformer')">
+                    <img src="../static/images/platformer.jpg" alt="Game 1">
+                    <h2>Platformer Game</h2>
+                    <p>Jump higher, run faster, and conquer every level!</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="triviaquiz.html" onclick="selectGame('Trivia Quiz')">
+                    <img src="../static/images/triviaquiz.jpg" alt="Game 2">
+                    <h2>Trivia Quiz</h2>
+                    <p>Knowledge is power; trivia is the battleground!</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="tictactoe.html" onclick="selectGame('TIC TAC TOE')">
+                    <img src="../static/images/tictactoe.jpg" alt="Game 3">
+                    <h2>TIC TAC TOE</h2>
+                    <p>In this game of strategy, every move counts!</p>
+                </a>
+            </div>
+            <div class="game-card">
+                <a href="game4.html" onclick="selectGame('game4')">
+                    <img src="../static/images/snakegame.jpg" alt="Game 4">
+                    <h2>SNAKE GAME</h2>
+                    <p>Stay sharp and avoid your own tail—survival is key!</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+    <script>
+        function selectGame(game) {
+            alert("You selected: " + game);
+            // Redirect or perform other actions based on the selected game
+            // window.location.href = game + '.html'; // Uncomment to redirect
+        }
+    </script>
+</body>
+</html>
